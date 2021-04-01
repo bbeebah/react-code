@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<title>Pure HTML</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="stylesheet" href="">
+<style>
+html,body {font-family:"Verdana",sans-serif}
+h1,h2,h3,h4,h5,h6 {font-family:"Segoe UI",sans-serif}
+.container {
+    border: 1px solid blue;
+    width: 250px;
+}
+.box {
+    display: inline-block;
+    width:200px;
+}
+.outer-block { 
+    -moz-column-count: 2;
+    -webkit-column-count: 2;
+    column-count: 2;
+    -moz-column-gap: 1em;
+    -webkit-column-gap: 1em;
+    column-gap: 1em;
+    border: 1px solid blue;
+}
+.items { 
+    display: inline-block;
+    margin: 1em 0;
+    width:200px;
+}
+/* set2: end */
+
+/* disp: start */
+.disp-large{
+    display: block;
+}
+.disp-small{
+    display: none;
+}
+@media only screen and (max-width: 450px) {
+    .disp-large{
+        display: none;
+    }
+    .disp-small{
+        display: block;
+    }
+}
+/* disp: end */
+
+.outout{
+    width:450px;
+}
+
+#i1{height: 200px;}
+#i2{height: 150px;}
+#i3{height: 150px;}
+#i4{height: 200px;}
+</style>
+<script src=""></script>
+<body>
+    <div class="outout">
+        <div class="outer-block disp-large">
+            <div class="items " id='i1' style="background-color: orange;">1</div>
+            <div class="items " id='i3' style="background-color: darkolivegreen;">3</div>
+            <div class="items " id='i2' style="background-color: darkcyan;">2</div>
+            <div class="items " id='i4' style="background-color: cyan;">4</div>
+        </div>
+        <div class="container disp-small">
+            <div class="box " id='i1' style="background-color: orange;">1</div>
+            <div class="box " id='i2' style="background-color: darkcyan;">2</div>
+            <div class="box " id='i3' style="background-color: darkolivegreen;">3</div>
+            <div class="box " id='i4' style="background-color: cyan;">4</div>
+        </div>
+    </div>
+</body>
+</html>
